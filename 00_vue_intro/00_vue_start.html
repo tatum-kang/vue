@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Vue Start</title>
+</head>
+<body>
+  <div>
+    <div id="app">
+    {{ message }} - {{ count }}
+    <button v-on:click="plus">plus</button>
+    <button v-on:click="minus">minus</button>
+    </div>
+  </div>
+
+
+  <script>
+  // vue 코드가 작성되는곳
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello, Vue!',
+        count: 0,
+      },
+      methods:{
+        plus: function() {
+          this.count ++
+        },
+        minus: function() {
+          this.count --
+        }
+      }
+    })
+  </script>
+</body>
+</html>
